@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<article class="post">
+  <h2>{{ page.title }}</h2>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  
+  {% include disqus.html %}
+</article>

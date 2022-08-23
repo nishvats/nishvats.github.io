@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
+          <br>
+          <br>
+          <nav>
+            <a href="{{ site.baseurl }}/index">Home</a>
+            <a href="{{ site.baseurl }}/cv">CV</a>
+            <a href="{{ site.baseurl }}/research">Research</a>
+            <!-- <a href="{{ site.baseurl }}/notebook">Notebook</a> -->
+            <!-- <a href="{{ site.baseurl }}/public_goods">Public Goods</a> -->
+            <a href="{{ site.baseurl }}/teaching">Teaching</a>
+            <!-- <a href="{{ site.baseurl }}/resources">Resources</a> -->
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <!--
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+        </footer>
+      </div>
+    </div>
+     -->
+    <br>
+    <br>
+    <br>
+    {% include analytics.html %}
+  </body>
+</html>
